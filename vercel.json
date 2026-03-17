@@ -24,6 +24,10 @@
       "src": "/(.*)",
       "dest": "fe/$1",
       "check": true
+    },
+    {
+      "src": "/(.*)",
+      "dest": "fe/index.html"
     }
   ]
 }
