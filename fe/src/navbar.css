@@ -1,0 +1,36 @@
+/* navbar section */
+.navbar{
+    background-color:#3d3d3e !important;
+}
+.navbar-collapse{
+    margin-right: 100px;
+}
+.navbar-nav{
+    gap: 30px;
+}
+.navbar h4{
+    font-weight: 800;
+    color: rgb(226, 226, 226);
+}
+.navbar a{
+    color: rgb(242, 242, 242);
+    font-weight: 500;
+}
+.navbar h6{
+    color: rgb(226, 228, 230);
+}
+.nav-link:hover{
+    color: rgb(246, 109, 59) !important;
+}
+.navbar .dropdown-item:hover{
+    color: rgb(246, 109, 59) !important;
+}
+.dropdown-menu{
+    background-color:#3d3d3e !important;
+}
+
+@media (max-width:992px) {
+    .navbar-nav {
+        margin-left: 30px !important;
+    }
+}

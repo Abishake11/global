@@ -1,0 +1,29 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+
+h1,h2,h3,h4,h5,h6,th,tr,li,p,a{
+     font-family: "Sofia Sans Condensed", sans-serif;
+}
+/* 
+a{
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+} */
+
+input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+input,textarea{
+    border: 2px solid rgb(69, 68, 68) !important;
+}
+textarea:focus{
+    outline: none !important;
+  box-shadow: none !important;
+
+}

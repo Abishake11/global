@@ -1,0 +1,9 @@
+
+.teacher-dashboard{
+    padding: 40px 0px;
+    background-color: rgb(241, 227, 222);
+    min-height: 55vh;
+}
+.teacher-dashboard h1{
+    font-weight: 600;
+}

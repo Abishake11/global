@@ -1,0 +1,150 @@
+/* common classes */
+.space{
+    padding: 40px 0px;
+}
+.ims{
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+/* overall animation */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards; /* adjust duration to taste */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* banner section. */
+.banner {
+    background-color: #f5deb7;
+    padding: 70px 0px !important;
+}
+.banner h1{
+    font-weight: 800;
+    font-size: 40px ;
+}
+
+.banimg{
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+/* banner right side */
+.banner h2{
+    font-weight: 600;
+    font-size: 32px;
+    margin-top: 100px;
+    margin-left: 10px;
+}
+.banner h3{
+    margin-left: 13px;
+    font-weight: 700;
+}
+.banner ul{
+    margin-top: 30px;
+}
+.banner ul>li{
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.banner .btn-course{
+    background-color: #de7d50;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+.banner .btn-mentor{
+    background-color: #de7d50;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+.banner .row>.col-md-6:nth-child(2){
+    margin-top: 100px;
+}
+
+@media (max-width:580px) {
+    .space{
+        padding: 40px 40px;
+    }
+}
+
+/* icse section --------------------------------------------------- */
+.icse{
+    background-color:rgb(250, 250, 239);
+}
+.icse h2{
+    font-weight: 600;
+    color: rgb(186, 32, 42);
+}
+.left-icse{
+    padding: 20px;
+}
+.icse b{
+    color: rgb(54, 54, 87);
+}
+
+/* cbse section.... ------------------------------*/
+.cbse{
+    background-color: rgb(252, 251, 250);
+}
+.cbse h2{
+    font-weight: 600;
+    color: rgb(186, 32, 42);
+
+}
+.right-cbse{
+     padding: 20px;
+}
+.cbse b{
+     color: rgb(54, 54, 87);
+}
+@media (max-width:768px) {
+    .cbse .row{
+        flex-direction: column-reverse;
+    }
+}
+
+/* Matric Section */
+.matric{
+    background-color: rgb(252, 251, 250);
+}
+.matric h2{
+    font-weight: 600;
+        color: rgb(186, 32, 42);
+
+}
+.left-matric{
+    padding: 20px;
+}
+.matric b{
+     color: rgb(54, 54, 87);
+}
+
+/* Sboard Section */
+.sboard{
+    background-color: rgb(252, 251, 250);
+}
+.sboard h2{
+    font-weight: 600;
+        color: rgb(186, 32, 42);
+
+}
+.right-sboard{
+     padding: 20px;
+}
+.sboard b{
+     color: rgb(54, 54, 87);
+}
+@media (max-width:768px) {
+    .sboard .row{
+        flex-direction: column-reverse;
+    }
+}

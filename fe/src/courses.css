@@ -1,0 +1,38 @@
+
+.course {
+    background-color: rgb(242, 137, 102);
+}
+.course h5{
+    color: rgb(64, 64, 64);
+}
+.course .card{
+    height: 570px;
+}
+.course h2{
+    font-weight: 800;
+}
+.course ul{
+    padding: 0px 15px;
+}
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+@media (max-width:1400px) {
+    .course .col-md-3{
+        width: 300px;
+        margin-top: 10px;
+    }
+    .course .row{
+        justify-content: space-between;
+    }
+}
+@media (max-width:768px) {
+    .course .row{
+        justify-content: center;
+    }
+    .course h2{
+        text-align: center;
+    }
+}

@@ -1,0 +1,184 @@
+.space{
+    padding: 40px 0px;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+/* Banner Section */
+.banner2{
+    background-color: rgb(252, 184, 141);
+    color: rgb(66, 65, 65);
+}
+.shine{
+    font-weight: 600;
+    font-size: 70px;
+    font-family: "Sofia Sans Condensed", sans-serif;
+}
+.banner2 p{
+    text-align: justify;
+    font-weight: 600;
+    font-size: 20px;
+    word-spacing: 5px;
+}
+
+/* How it works section */
+.how-works{
+   background-color: rgb(252, 184, 141);
+   color: rgb(249, 246, 245);
+   overflow-x: hidden;
+   padding: 70px 0px;
+}
+.how-works h2{
+    font-weight: 600;
+    font-size: 70px;
+    color: rgb(213, 102, 62);
+}
+.how-works .row{
+    justify-content: space-between ;
+}
+.how-works .work-box{
+    min-height: 350px;
+    width: 350px;
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(250, 232, 217);
+    color: rgb(81, 70, 82);
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.how-works .work-box img{
+    height: 130px;
+    width: 150px;
+}
+.how-works .work-box h5{
+    font-weight: 700;
+    margin: 5px 0px;
+}
+.how-works .work-box p{
+    font-size: 16px;
+    margin-top: 20px;
+    text-align: justify;
+}
+.how-works .wrap-work{
+    justify-content: space-between;
+    padding: 10px;
+}
+@media (max-width:768px) {
+    .how-works .row{
+        justify-content: center;
+    }
+}
+
+/* meet-tutors section */
+.meet-tutors{
+   background-color: rgb(252, 184, 141);
+   color: rgb(53, 53, 53);
+   overflow-x: hidden;
+   padding: 80px 0px;
+}
+.meet-tutors p{
+    font-size: 20px;
+}
+.meet-tutors h2{
+    font-weight: 600;
+}
+.meet-tutors .row{
+    margin-top: 70px;
+    justify-content: space-around;
+}
+.meet-tutors .tutor-card{
+    background-color: rgb(250, 232, 217);
+    height: 220px;
+    width: 300px;
+    border-radius: 10px;
+    position: relative;
+    color: #565656;
+    margin-top: 80px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.meet-tutors .tutor-card p{
+    padding-top: 110px;
+    text-align: justify;
+    font-size: 15px;
+}
+.meet-tutors .tutor-profile{
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgb(213, 186, 161);
+    
+    height: 150px;
+    width: 150px;
+   left: 60px;
+   top: -60px;
+}
+.meet-tutors .tutor-profile img{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 4px solid rgb(150, 51, 51);
+    padding: 4px;
+    object-fit: cover;
+}
+@media (max-width:1200px) {
+    .meet-tutors .tutor-card{
+        margin-top: 100px;
+    }
+}
+@media (max-width:912px) {
+    .meet-tutors .row{
+        margin-top: 15px;
+    }
+}
+
+
+/* Testimonial section */
+.testimonial{
+   background-color: rgb(252, 184, 141);
+   color: rgb(53, 53, 53);
+   overflow-x: hidden;
+   padding: 80px 0px;
+}
+.testimonial p{
+    text-align: justify;
+    padding-top:10px ;
+    font-size: 20px;
+}
+.testimonial .stu-profile{
+    background-color: rgb(240, 217, 195);
+    width: 100%;
+    min-height: 270px;
+    padding: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.testimonial h5{
+    margin-bottom: 0px;
+}
+.stu-profile p{
+    font-size: 13px;
+}
+@media (max-width:768px) {
+    .stu-profile{
+    margin-top: 15px;
+    }
+}
+
+/* common media query */
+
+@media (max-width:768px) {
+    .shine{
+    font-weight: 600;
+    font-size: 40px;
+    font-family: "Sofia Sans Condensed", sans-serif;
+}
+}
+
+@media (max-width:580px) {
+    .banner2, .how-works, .meet-tutors, .testimonial{
+    padding: 30px 20px;
+    }
+}
+
+
+

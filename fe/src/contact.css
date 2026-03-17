@@ -1,0 +1,41 @@
+.contact-section{
+    color: rgb(248, 247, 249)!important;
+    /* background-color: rgb(252, 184, 141); */
+        background-color: #f5deb7;
+
+}
+
+.contact-section .card {
+  border-radius: 12px;
+  background-color: transparent;
+}
+.contact-section .follow a{
+  border: 1px solid rgb(72, 71, 71);
+}
+.contact-section input{
+    background: transparent;
+}
+.contact-section textarea{
+    background:transparent;
+}
+.contact-section .title{
+    font-weight: 600;
+}
+.contact-section .title2{
+    font-weight: 600;
+}
+.contact-section .card .form-label {
+  font-weight: 500;
+}
+
+.contact-section .btn-outline-secondary.btn-sm {
+  padding: .25rem .5rem;
+  font-size: .8rem;
+}
+
+/* small screens tweak */
+@media (max-width: 576px) {
+  .contact-section .card { padding: 1rem; }
+  .contact-section .card .btn { width: 100%; }
+  .contact-section .d-flex.align-items-center.gap-3 { flex-direction: column; gap: .5rem; }
+}

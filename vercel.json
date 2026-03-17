@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "be/server.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "fe/package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "dist" }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "be/server.js"
+    },
+    {
+      "src": "/uploads/(.*)",
+      "dest": "be/server.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "fe/$1",
+      "check": true
+    }
+  ]
+}
