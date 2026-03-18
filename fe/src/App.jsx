@@ -9,7 +9,7 @@ import Courses from './courses';
 import Contact from './contact';
 import Signup from './signup';
 import Login from './login';
-import DashBoard from './Component/DashBoard';
+import Dashboard from './Component/Dashboard';
 import StudentDashboard from "./pages/StudentDashboard";
 import TeacherDashboard from "./pages/TeacherDashboard";
 import AdminDashboard from "./pages/AdminDashboard";
@@ -29,7 +29,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />}/>
-          <Route path="/dashboard" element={<DashBoard />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/studentDashboard" element={<StudentDashboard />} />
           <Route path="/teacherDashboard" element={<TeacherDashboard />} />
           <Route path="/admin-dashboard" element={<AdminDashboard />} />
