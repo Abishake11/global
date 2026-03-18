@@ -53,7 +53,7 @@ function TeacherDashboard() {
                 <p>
                   <strong>Resume:</strong>{" "}
                   <a
-                    href={`${API_URL}/uploads/teachers/${data.resume}`}
+                    href={data.resume && data.resume.startsWith("http") ? data.resume : `${API_URL}/uploads/teachers/${data.resume}`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >

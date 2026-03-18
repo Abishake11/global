@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const Student = require("../models/Student");
 const bcrypt = require("bcrypt");
-const multer = require("multer");
+// const multer = require("multer");
 const fs = require("fs");
 const path = require("path");
 
@@ -11,15 +11,10 @@ if (!fs.existsSync(uploadDir)) {
   fs.mkdirSync(uploadDir, { recursive: true });
 }
 
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, "uploads/students");
-  },
-  filename: (req, file, cb) => {
-    cb(null, Date.now() + "-" + file.originalname);
-  },
-});
+const { put } = require("@vercel/blob");
+const multer = require("multer");
 
+const storage = multer.memoryStorage();
 const upload = multer({ storage });
 
 router.post("/signup", upload.single("resume"), async (req, res) => {
@@ -28,6 +23,15 @@ router.post("/signup", upload.single("resume"), async (req, res) => {
 
     const hashedPassword = await bcrypt.hash(password, 10);
 
+    let resumeUrl = null;
+    if (req.file) {
+      const blob = await put(Date.now() + "-" + req.file.originalname, req.file.buffer, {
+        access: "public",
+        token: process.env.BLOB_READ_WRITE_TOKEN,
+      });
+      resumeUrl = blob.url;
+    }
+
     const student = await Student.create({
       name,
       schoolName,
@@ -35,7 +39,7 @@ router.post("/signup", upload.single("resume"), async (req, res) => {
       email,
       grade,
       password: hashedPassword,
-      resume: req.file ? req.file.filename : null,
+      resume: resumeUrl,
     });
 
     res.json({

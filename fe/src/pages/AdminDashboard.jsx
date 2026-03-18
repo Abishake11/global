@@ -129,7 +129,7 @@ function AdminDashboard() {
                   {/* File Preview / Download */}
                   <td>
                     <a
-                      href={`${API_URL}/uploads/teachers/${t.resume}`}
+                      href={t.resume && t.resume.startsWith("http") ? t.resume : `${API_URL}/uploads/teachers/${t.resume}`}
                       target="_blank"
                       rel="noreferrer"
                     >
