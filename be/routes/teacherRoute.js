@@ -1,17 +1,10 @@
 const router = require("express").Router();
 const Teacher = require("../models/Teacher");
 const bcrypt = require("bcrypt");
-// const multer = require("multer");
+const multer = require("multer");
+const { put } = require("@vercel/blob");
 const fs = require("fs");
 const path = require("path");
-
-const uploadDir = path.join(__dirname, "../uploads/teachers");
-if (!fs.existsSync(uploadDir)) {
-  fs.mkdirSync(uploadDir, { recursive: true });
-}
-
-const { put } = require("@vercel/blob");
-const multer = require("multer");
 
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
