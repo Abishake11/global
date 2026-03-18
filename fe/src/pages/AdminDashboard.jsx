@@ -74,7 +74,7 @@ function AdminDashboard() {
           <table border="1" cellPadding="20">
             <thead>
               <tr>
-                <th>Username</th>
+                <th>Name</th>
                 <th>Email</th>
                 <th>Phone</th>
                 <th>Grade</th>
@@ -85,7 +85,7 @@ function AdminDashboard() {
             <tbody>
               {students.map((s) => (
                 <tr key={s._id}>
-                  <td>{s.username}</td>
+                  <td>{s.name}</td>
                   <td>{s.email}</td>
                   <td>{s.phone || "N/A"}</td>
                   <td>{s.grade || "N/A"}</td>
@@ -113,8 +113,8 @@ function AdminDashboard() {
               <tr>
                 <th>Name</th>
                 <th>Email</th>
-                <th>Subject</th>
-                <th>File</th>
+                <th>Subject / Spec.</th>
+                <th>Resume</th>
                 <th>Action</th>
               </tr>
             </thead>
@@ -124,12 +124,12 @@ function AdminDashboard() {
                 <tr key={t._id}>
                   <td>{t.name}</td>
                   <td>{t.email}</td>
-                  <td>{t.subject}</td>
+                  <td>{t.fieldName}</td>
 
                   {/* File Preview / Download */}
                   <td>
                     <a
-                      href={`${API_URL}/uploads/teachers/${t.file}`}
+                      href={`${API_URL}/uploads/teachers/${t.resume}`}
                       target="_blank"
                       rel="noreferrer"
                     >

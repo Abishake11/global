@@ -40,8 +40,8 @@ module.exports = router;
 // Get all users (students + teachers)
 router.get("/dashboard", async (req, res) => {
   try {
-    const students = await Student.find().select("username email phone grade createdAt");
-    const teachers = await Teacher.find().select("name email subject file createdAt");
+    const students = await Student.find().select("name email phone grade createdAt");
+    const teachers = await Teacher.find().select("name email fieldName resume createdAt");
 
     res.json({
       success: true,
